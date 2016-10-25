@@ -165,3 +165,13 @@ isPlaying = () => {
 
 // Create an event listener to update playing state when a clip stops playing
 $(window).on('CornerstoneToolsClipStopped', () => Session.set('UpdateCINE', Random.id()));
+
+showSeedDialog = function() {
+    var seedDialog = document.getElementById('seedDialog');
+    showDialog(seedDialog);
+}
+
+hideSeedDialog = function() {
+    var seedDialog = document.getElementById('seedDialog');
+    hideDialog(seedDialog);
+}

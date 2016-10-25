@@ -1,0 +1,84 @@
+@import "{design}/app.styl"
+
+#seedDialog
+  theme('border', '1px solid $uiBorderColor')
+  theme('background', '$uiGrayDarkest')
+  theme('color', '$textSecondaryColor')
+  display: none
+  z-index: 1000
+  position: absolute
+  top: auto
+  left: auto
+  bottom: 3px
+  right: 3px
+  overflow: hidden
+  padding: 10px
+  width: 220px
+  height: 160px
+  opacity: 0.95
+  border-radius: 8px
+  
+  .btn
+    theme('background', '$uiGrayDarkest')
+    theme('color', '$textSecondaryColor')
+
+    &:hover
+      theme('color', '$hoverColor')
+
+    &:active, &.active
+      theme('color', '$activeColor')
+    
+    padding-top: 0px
+    padding-left: 0px
+
+h5, label
+  font-weight: 400
+  font-size: 18px
+  margin-top: 0px
+  
+i
+  font-size: 18px
+
+box-sizing: border-box
+
+#cineOptions
+  padding-left: 10px
+  overflow: auto
+
+#check
+  padding-left: 2px
+  padding-top: 8px
+  padding-bottom: 8px
+  
+  
+.relabelDialog
+  theme('border', '1px solid $uiBorderColor')
+  theme('background', '$uiGrayDarkest')
+  theme('color', '$textSecondaryColor')
+  z-index: 1000;
+  position: absolute;
+  margin: 0px;
+  left: 40%;
+  top: 40%;
+  border-radius: 8px
+  overflow: hidden
+  padding: 10px
+  width: 220px
+  height: 140px
+  opacity: 0.95
+  
+  .btn
+    theme('background', '$uiGrayDarkest')
+    theme('color', '$textSecondaryColor')
+
+    &:hover
+      theme('color', '$hoverColor')
+
+    &:active, &.active
+      theme('color', '$activeColor')
+    
+    padding-top: 0px
+    padding-left: 0px
+    
+  .button_area
+    padding-top: 10px

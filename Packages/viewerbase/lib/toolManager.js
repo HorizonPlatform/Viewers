@@ -7,7 +7,7 @@ var tools = {};
 
 var toolDefaultStates = {
     activate: [],
-    deactivate: ['length', 'angle', 'annotate', 'ellipticalRoi', 'rectangleRoi'],
+    deactivate: ['length', 'angle', 'annotate', 'ellipticalRoi', 'rectangleRoi', 'seedPoint'],
     enable: [],
     disable: [],
     disabledToolButtons: []
@@ -25,16 +25,19 @@ function configureTools() {
     cornerstoneTools.panMultiTouch.setConfiguration(multiTouchPanConfig);
 
     // Set the text box background color
-    cornerstoneTools.textStyle.setBackgroundColor('rgba(0, 0, 0, 0.95)');
+    //cornerstoneTools.textStyle.setBackgroundColor('rgba(0, 0, 0, 0.95)');
+    cornerstoneTools.textStyle.setBackgroundColor('rgba(0, 0, 0, 0.70)');
 
     // Set the tool width
     cornerstoneTools.toolStyle.setToolWidth(2);
 
     // Set color for inactive tools
-    cornerstoneTools.toolColors.setToolColor('#ff00ff'); //rgb(255, 255, 0)');
+    //cornerstoneTools.toolColors.setToolColor('#ff00ff'); //rgb(255, 255, 0)');
+    cornerstoneTools.toolColors.setToolColor('#ffb640'); //rgb(255, 255, 0)');
 
     // Set color for active tools
-    cornerstoneTools.toolColors.setActiveColor('#00ffff'); //rgb(0, 255, 0)'
+    //cornerstoneTools.toolColors.setActiveColor('#00ffff'); //rgb(0, 255, 0)'
+    cornerstoneTools.toolColors.setActiveColor('#00a4d9'); //rgb(0, 255, 0)'
 
     // Set the configuration values for the text annotation (Arrow) tool
     const annotateConfig = {
@@ -101,6 +104,10 @@ toolManager = {
         toolManager.addTool('annotate', {
             mouse: cornerstoneTools.arrowAnnotate,
             touch: cornerstoneTools.arrowAnnotateTouch
+        });
+        toolManager.addTool('seedPoint', {
+            mouse: cornerstoneTools.seedAnnotate,
+            touch: cornerstoneTools.seedAnnotateTouch
         });
 
         if (OHIF.viewer.defaultTool) {
@@ -219,6 +226,12 @@ toolManager = {
             toolManager.setActiveToolForElement(tool, element);
         });
         activeTool = tool;
+        
+        if (activeTool == "seedPoint") {
+          showSeedDialog();
+        } else {
+          hideSeedDialog();
+        }
 
         // Store the active tool in the session in order to enable reactivity
         Session.set('ToolManagerActiveTool', tool);

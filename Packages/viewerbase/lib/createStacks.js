@@ -49,9 +49,6 @@ createStacks = function(study) {
                 // Include the instance number
                 displaySet.instanceNumber = instance.instanceNumber;
 
-                // Include the acquisition datetime
-                displaySet.acquisitionDatetime = instance.acquisitionDatetime;
-
                 displaySets.push(displaySet);
             } else if (isSingleImageModality(instance.modality)) {
                 displaySet = makeDisplaySet(series, [ instance ]);
@@ -61,9 +58,6 @@ createStacks = function(study) {
 
                 // Include the instance number
                 displaySet.instanceNumber = instance.instanceNumber;
-
-                // Include the acquisition datetime
-                displaySet.acquisitionDatetime = instance.acquisitionDatetime;
 
                 displaySets.push(displaySet);
             } else {

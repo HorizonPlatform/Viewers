@@ -1,0 +1,1 @@
+"C:\Program Files\orthancAndPluginsWin64.stable\Orthanc.exe" --verbose "C:\Program Files\orthancAndPluginsWin64.stable\Configuration.json"

@@ -107,6 +107,10 @@ Package.onUse(function(api) {
     api.addFiles('client/components/viewer/cineDialog/cineDialog.html', 'client');
     api.addFiles('client/components/viewer/cineDialog/cineDialog.js', 'client');
     api.addFiles('client/components/viewer/cineDialog/cineDialog.styl', 'client');
+    
+    api.addFiles('client/components/viewer/seedDialog/seedDialog.html', 'client');
+    api.addFiles('client/components/viewer/seedDialog/seedDialog.js', 'client');
+    api.addFiles('client/components/viewer/seedDialog/seedDialog.styl', 'client');
 
     api.addFiles('client/components/viewer/toolbarSectionButton/toolbarSectionButton.html', 'client');
     api.addFiles('client/components/viewer/toolbarSectionButton/toolbarSectionButton.js', 'client');
@@ -206,7 +210,6 @@ Package.onUse(function(api) {
         'lib/helpers/objectEach.js',
         'lib/helpers/ifTypeIs.js',
         'lib/helpers/prettyPrintStringify.js',
-        'lib/helpers/sorting.js',
         'lib/helpers/studyThumbnails.js',
         'lib/helpers/formatPN.js'
     ], 'client');
@@ -222,4 +225,27 @@ Package.onUse(function(api) {
     api.export('clearTools', 'client');
     api.export('resetViewport', 'client');
     api.export('invert', 'client');
+    
+    
+    api.export('showSeedDialog', 'client');
+    api.export('hideSeedDialog', 'client');
+    
+    // Both client and server functions
+    api.addFiles('both/collections.js', [ 'client', 'server' ]);
+    api.export('ImageMeasurements', [ 'client', 'server' ]);
+    
+    api.addFiles('lib/handleMeasurementAdded.js', 'client');
+    api.addFiles('lib/handleMeasurementModified.js', 'client');
+    api.addFiles('lib/handleMeasurementRemoved.js', 'client');
+    api.export('handleMeasurementAdded', 'client');
+    api.export('handleMeasurementModified', 'client');
+    api.export('handleMeasurementRemoved', 'client');
+    
+    api.addFiles('lib/syncImageMeasurementAndToolData.js', 'client');
+    api.export('syncImageMeasurementAndToolData', 'client');
+    
+    // Server functions
+    api.addFiles('server/publications.js', 'server');
+    api.addFiles('server/methods.js', [ 'server' ]);
+    
 });

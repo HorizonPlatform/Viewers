@@ -1,0 +1,36 @@
+<template name="seedDialog">
+  <div id="seedDialog" class="noselect">
+    <h5>Seed Points Controls</h5>
+    <div id="cineOptions">
+      <div>
+        Start with: 
+        <input onClick="this.setSelectionRange(0, this.value.length)" type="text" id="f-letter" value="A" maxlength="1" size="1" style="text-transform:uppercase">
+        <input onClick="this.select();" id="f-number" value="1" style="width: 3em">
+      </div>
+      <div id="check">
+        <input type="checkbox" id="check-coords" checked> Show Coordinates<br>
+        <input type="checkbox" id="check-countUp" checked> Count up<br>
+      </div>
+      <a id="seedClearAll" class="btn">
+        <i class="fa fa-trash-o"></i> Clear all seed points
+      </a>
+    </div>
+  </div>
+  
+  <dialog class="relabelDialog" oncontextmenu="return false">
+    <h5>Edit your annotation</h5>
+    <div id="cineOptions">
+      New label: 
+      <input type="text" id="relabelText" placeholder="A" maxlength="1" size="1" style="text-transform:uppercase">
+      <input type="number" id="relabelNumber" placeholder="1" style="width: 3em">
+      <div class="button_area">
+        <a class="relabelRemove btn">
+          <i class="fa fa-trash-o"></i> Remove marker
+        </a>
+        <a class="relabelConfirm btn">
+          <i class="fa fa-floppy-o"></i> Save changes
+        </a>
+      </div>
+    </div>
+  </dialog>
+</template>

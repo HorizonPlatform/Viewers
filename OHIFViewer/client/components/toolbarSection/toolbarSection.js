@@ -92,34 +92,41 @@ Template.toolbarSection.helpers({
             iconClasses: 'fa fa-undo'
         });
 
-        buttonData.push({
-            id: 'previousDisplaySet',
-            title: 'Previous',
-            classes: 'imageViewerCommand',
-            buttonTemplateName: 'displaySetNavigation',
-            isNext: false
-        });
+//        buttonData.push({
+//            id: 'previousDisplaySet',
+//            title: 'Previous',
+//            classes: 'imageViewerCommand',
+//            buttonTemplateName: 'displaySetNavigation',
+//            isNext: false
+//        });
 
-        buttonData.push({
-            id: 'nextDisplaySet',
-            title: 'Next',
-            classes: 'imageViewerCommand',
-            buttonTemplateName: 'displaySetNavigation',
-            isNext: true
-        });
+//        buttonData.push({
+//            id: 'nextDisplaySet',
+//            title: 'Next',
+//            classes: 'imageViewerCommand',
+//            buttonTemplateName: 'displaySetNavigation',
+//            isNext: true
+//        });
 
-        buttonData.push({
-            id: 'toggleCinePlay',
-            title: 'Toggle CINE Play',
-            classes: 'imageViewerCommand',
-            buttonTemplateName: 'playClipButton'
-        });
+//        buttonData.push({
+//            id: 'toggleCinePlay',
+//            title: 'Toggle CINE Play',
+//            classes: 'imageViewerCommand',
+//            buttonTemplateName: 'playClipButton'
+//        });
 
+//        buttonData.push({
+//            id: 'toggleCineDialog',
+//            title: 'CINE',
+//            classes: 'imageViewerCommand',
+//            iconClasses: 'fa fa-youtube-play'
+//        });
+        
         buttonData.push({
-            id: 'toggleCineDialog',
-            title: 'CINE',
-            classes: 'imageViewerCommand',
-            iconClasses: 'fa fa-youtube-play'
+            id: 'seedPoint',
+            title: 'Seed Point',
+            classes: 'imageViewerTool imageViewerCommand',
+            iconClasses: 'fa fa-dot-circle-o'
         });
 
         buttonData.push({
@@ -197,19 +204,19 @@ Template.toolbarSection.helpers({
     hangingProtocolButtons() {
         let buttonData = [];
 
-        buttonData.push({
-            id: 'previousPresentationGroup',
-            title: 'Prev. Stage',
-            iconClasses: 'fa fa-step-backward',
-            buttonTemplateName: 'previousPresentationGroupButton'
-        });
+//        buttonData.push({
+//            id: 'previousPresentationGroup',
+//            title: 'Prev. Stage',
+//            iconClasses: 'fa fa-step-backward',
+//            buttonTemplateName: 'previousPresentationGroupButton'
+//        });
 
-        buttonData.push({
-            id: 'nextPresentationGroup',
-            title: 'Next Stage',
-            iconClasses: 'fa fa-step-forward',
-            buttonTemplateName: 'nextPresentationGroupButton'
-        });
+//        buttonData.push({
+//            id: 'nextPresentationGroup',
+//            title: 'Next Stage',
+//            iconClasses: 'fa fa-step-forward',
+//            buttonTemplateName: 'nextPresentationGroupButton'
+//        });
 
         return buttonData;
     }

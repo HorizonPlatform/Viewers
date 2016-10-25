@@ -5,7 +5,6 @@ $expandedHeight = 160px
 .logoImage
   display: inline-block
   height: 100%
-  float: left
 
 .topBar
   height: $topBarHeight
@@ -19,15 +18,13 @@ $expandedHeight = 160px
     text-decoration: none
 
     .logoImage
-      margin: 0 8px
-      width: 30px
+      margin: 0 5px
 
     .logoText
       display: inline-block
       font-family: $logoFontFamily
       font-weight: $logoFontWeight
       theme('color', '$textPrimaryColor')
-      line-height: 30px
 
   .studyListLinkSection
     theme('border-left', '%s solid $uiBorderColor' % $uiBorderThickness)
@@ -57,8 +54,7 @@ $expandedHeight = 160px
       line-height: $expandedHeight
 
       .logoImage
-        width: 50px
-        margin: 0 20px
+        margin: 5px 5px 15px 5px
 
       .logoText
         font-size: 30px
